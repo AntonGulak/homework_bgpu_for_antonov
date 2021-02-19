@@ -10,14 +10,11 @@ public class Playing_card {
             "Валет", "Королева", "Король", "Туз"
     };
 
-    private String[][] coloda_cart = new String[4][13];
-
-
-    private int players;
-
     public Playing_card() {
         rand();
     }
+
+    private static String[][] coloda_cart = new String[4][13];
 
     public void rand ()
     {
@@ -31,12 +28,42 @@ public class Playing_card {
 
         }
 
-        int temp = (int) (Math.random() * 13);
+        int temp1_rand = (int) (Math.random() * 255);
+        int temp2_rand = (int) (Math.random() * 255);
 
-        System.out.println(temp);
+        for (int i = 0; i < 4; i++)
+        {
+            for (int j = 0; j < 13; j++)
+            {
+                int t1_i = (i+temp1_rand)%4;
+                int t2_i = (i+temp2_rand)%4;
+
+                int t1_j = (j+temp1_rand)%13;
+                int t2_j = (j+temp2_rand)%13;
+
+                String temp = coloda_cart[t1_i][t1_j];
+                coloda_cart[t1_i][t1_j] = coloda_cart[t2_i][t2_j];
+                coloda_cart[t2_i][t2_j] = temp;
+
+            }
+
+        }
+
+        for (int i = 0; i < 4; i++)
+        {
+            for (int j = 0; j < 13; j++)
+            {
+                System.out.println(coloda_cart[i][j]);
+            }
+
+        }
+
+
 
 
     }
+
+    private int players;
 
     public int getNumber_games() {
         return players;
