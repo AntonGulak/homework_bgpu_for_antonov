@@ -10,12 +10,26 @@ public class Playing_card {
             "Валет", "Королева", "Король", "Туз"
     };
 
-    private String suit = null;
-    private String rank = null;
+    private String[][] coloda_cart = new String[4][13];
+
+
     private int players;
 
     public Playing_card() {
+        rand();
+    }
 
+    public void rand ()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            for (int j = 0; j < 13; j++)
+            {
+                coloda_cart[i][j] = SUITS_LIST[i] + " " + RANK_LIST[j];
+                System.out.println(coloda_cart[i][j]);
+            }
+
+        }
     }
 
     public int getNumber_games() {
@@ -30,9 +44,6 @@ public class Playing_card {
             System.out.println("Не хватит карт, введите от 1 до 5 игроков");
     }
 
-    @Override
-    public String toString() {
-        System.out.println(rank+" "+suit);
-        return rank+" "+suit;
-    }
+
+
 }
