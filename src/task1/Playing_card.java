@@ -14,6 +14,21 @@ public class Playing_card {
         rand();
     }
 
+    public void PrintCard()
+    {
+        int tmp =0 ;
+
+        for (int i = 0; i < players; i++)
+        {
+            for (int j = 0; j < 5; j++)
+            {
+                System.out.println(coloda_cart[tmp++]);
+            }
+
+            System.out.println("");
+        }
+    }
+
     private static String[] coloda_cart = new String[52];
 
     public void rand ()
@@ -38,12 +53,6 @@ public class Playing_card {
             coloda_cart[j] = coloda_cart[k];
             coloda_cart[k] = str_tmp;
         }
-
-        for (int i = 0; i < 52; i++)
-        {
-            System.out.println(coloda_cart[i]);
-        }
-
 
     }
 
