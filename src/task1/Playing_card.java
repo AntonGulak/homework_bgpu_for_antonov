@@ -14,9 +14,8 @@ public class Playing_card {
     private String rank = null;
     private int players;
 
-    public Playing_card(String suit, String rank) {
-        this.suit = suit;
-        this.rank = rank;
+    public Playing_card() {
+
     }
 
     public int getNumber_games() {
