@@ -5,7 +5,7 @@ public class main {
         Playing_card distribution = new Playing_card();
 
         final int n = 5;
-        
+
         distribution.setNumber_games(n);
 
         distribution.PrintCard();
