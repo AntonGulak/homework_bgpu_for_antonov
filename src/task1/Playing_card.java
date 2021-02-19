@@ -48,7 +48,7 @@ public class Playing_card {
         }
 
         //Получение размешанной колоды карт
-        for (int i = 0; i < 52; i++)
+        for (int i = 0; i < 528; i++)
         {
             var j = (int) (Math.random()*52);
             var k = (int) (Math.random()*52);
