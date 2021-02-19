@@ -26,10 +26,16 @@ public class Playing_card {
             for (int j = 0; j < 13; j++)
             {
                 coloda_cart[i][j] = SUITS_LIST[i] + " " + RANK_LIST[j];
-                System.out.println(coloda_cart[i][j]);
+                //System.out.println(coloda_cart[i][j]);
             }
 
         }
+
+        int temp = (int) (Math.random() * 13);
+
+        System.out.println(temp);
+
+
     }
 
     public int getNumber_games() {
