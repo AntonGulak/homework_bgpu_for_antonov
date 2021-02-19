@@ -1,3 +1,5 @@
+package task1;
+
 public class Playing_card {
     public static final String[] SUITS_LIST = {
             "Пик", "Бубен", "Черв", "Треф"
@@ -10,11 +12,13 @@ public class Playing_card {
 
     private String suit = null;
     private String rank = null;
+    private int number_games;
 
     public Playing_card(String suit, String rank) {
         this.suit = suit;
         this.rank = rank;
     }
+
 
     @Override
     public String toString() {

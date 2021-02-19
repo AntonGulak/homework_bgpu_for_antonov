@@ -29,7 +29,7 @@
   </component>
   <component name="RunManager" selected="Application.main">
     <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main" />
+      <option name="MAIN_CLASS_NAME" value="task1.main" />
       <module name="homework_bgpu_for_antonov" />
       <method v="2">
         <option name="Make" enabled="true" />
