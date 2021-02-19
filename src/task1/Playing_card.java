@@ -14,6 +14,7 @@ public class Playing_card {
         rand();
     }
 
+    //Раздача карт каждому игроку
     public void PrintCard()
     {
         int tmp =0 ;
@@ -29,10 +30,13 @@ public class Playing_card {
         }
     }
 
+    //Массив для колоды карт
     private static String[] coloda_cart = new String[52];
+
 
     public void rand ()
     {
+        //Получение  неразмешанной колоды карт
         int tmp = 0;
         for (int i = 0; i < 4; i++)
         {
@@ -43,7 +47,7 @@ public class Playing_card {
 
         }
 
-
+        //Получение размешанной колоды карт
         for (int i = 0; i < 52; i++)
         {
             var j = (int) (Math.random()*52);
@@ -55,7 +59,7 @@ public class Playing_card {
         }
 
     }
-
+    //Количество игроков
     private int players;
 
     public int getNumber_games() {
