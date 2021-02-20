@@ -2,7 +2,6 @@ package task2;
 
 public class Rock {
 
-    //private int[] route;
     private int max_height;
     private int difference3_step;
     private int length;
@@ -29,13 +28,16 @@ public class Rock {
 
     public void setLength(int length) {
         this.length = length;
-        //int[] route = new int[length];
     }
 
     public void printRoute () {
+        int[] route = new int[length];
+        int[] temp = new int[3];
+
         for (int i = 0; i < length; i++)
         {
             int temp_random = (int) (Math.random() * max_height);
+            System.out.println(temp_random);
 
 
         }
