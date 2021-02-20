@@ -27,20 +27,17 @@ public class Rock {
     }
 
     public void setLength(int length) {
-        this.length = length;
+        if (length > 3) {
+            this.length = length;
+        } else {
+            System.out.println("Путь не может быть меньше трех вершин");
+        }
     }
 
     public void printRoute () {
         int[] route = new int[length];
         int[] temp = new int[3];
-
-        for (int i = 0; i < length; i++)
-        {
-            int temp_random = (int) (Math.random() * max_height);
-            System.out.println(temp_random);
-
-
-        }
+        
 
     }
 

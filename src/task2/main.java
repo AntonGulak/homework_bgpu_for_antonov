@@ -4,7 +4,7 @@ public class main {
     public static void main(String[] args) {
         Rock test = new Rock();
 
-        final int length = 5;
+        final int length = 7;
         test.setLength(length);
 
         final int max_height = 24;
