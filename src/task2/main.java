@@ -10,6 +10,7 @@ public class main {
         final int max_height = 24;
         test.setMax_height(max_height);
 
+        test.setDifference3_step(11);
         test.printRoute();
 
 
