@@ -59,7 +59,7 @@ public class Rock {
         difference = Math.abs(max-min);
 
         for (int i = 2; i < length; i++) {
-            int a = negative(min, difference - difference);
+            int a = negative(min, difference3_step - difference);
             int b = positive(max, difference3_step - difference);
 
             route[i] = (int) (Math.random() * (b - a ) + a);
@@ -79,7 +79,6 @@ public class Rock {
 
 
     }
-
 
 
     private int positive (int max_f, int diff) {
