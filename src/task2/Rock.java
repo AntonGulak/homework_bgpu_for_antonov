@@ -64,13 +64,12 @@ public class Rock {
 
             route[i] = (int) (Math.random() * (b - a ) + a);
 
-            if (route[i] > max) {
+            if (route[i-1] < route[i]) {
                 max = route[i];
-            };
-
-            if (route[i] < min) {
+            }
+            else {
                 min = route[i];
-            };
+            }
 
             difference = Math.abs(max-min);
 
