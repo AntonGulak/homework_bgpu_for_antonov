@@ -22,9 +22,7 @@ public class main {
 
         test.printRoute();
 
-
-
-
+        in.close();
 
     }
 }

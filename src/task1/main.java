@@ -1,14 +1,22 @@
 package task1;
 
+import java.util.Scanner;
+
 public class main {
     public static void main(String[] args) {
-        Playing_card distribution = new Playing_card();
 
-        final int n = 2;
+
+        Scanner in = new Scanner(System.in);
+        System.out.print("Введите количество игроков: ");
+        int n = in.nextInt();
+
+        Playing_card distribution = new Playing_card();
 
         distribution.setNumber_games(n);
 
         distribution.PrintCard();
+
+        in.close();
 
 
 
