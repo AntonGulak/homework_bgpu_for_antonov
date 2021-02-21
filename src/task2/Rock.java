@@ -40,8 +40,11 @@ public class Rock {
 
         int max;
         int min;
+
+        //Разница между двумя соседними вершинами
         int difference = 0;
 
+        // Генерация первых двух вершин
         route[0] = difference3_step / 2 + (int) (Math.random()*difference3_step / 2);
         route[1] = (int) (Math.random()*difference3_step);
 
@@ -53,17 +56,22 @@ public class Rock {
             max = route[1];
             min = route[0];
         }
-        System.out.println(route[0]);
-        System.out.println(route[1]);
+
+        System.out.print(route[0] + " ");
+        System.out.print(route[1] + " ");
 
         difference = Math.abs(max-min);
 
         for (int i = 2; i < length; i++) {
+            // Границы высоты следующей вершины
+            // (difference3_step - difference) - дисперсия относительно макс и мин
             int a = negative(min, difference3_step - difference);
             int b = positive(max, difference3_step - difference);
 
+
             route[i] = (int) (Math.random() * (b - a ) + a);
 
+            //Ищем мин. и максимум двух соседних вершин
             if (route[i-1] < route[i]) {
                 max = route[i];
             }
@@ -73,14 +81,14 @@ public class Rock {
 
             difference = Math.abs(max-min);
 
-            System.out.println(route[i]);
+            System.out.print(route[i] + " ");
 
         }
 
 
     }
 
-
+    // Если границы смещаются за пределы максимальной вершиной, то ограничить  этой максимальной вершиной
     private int positive (int max_f, int diff) {
         if (max_f+diff > max_height) {
              return max_height;
@@ -89,6 +97,7 @@ public class Rock {
             return max_f+diff;
     }
 
+    // Если границы смещаются в отрицательный диапазон, то ограничить нулем
     private int negative (int min_f, int diff) {
         if (min_f-diff < 0) {
             return 0;

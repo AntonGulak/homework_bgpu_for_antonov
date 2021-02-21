@@ -1,16 +1,24 @@
 package task2;
 
+import java.util.Scanner;
+
 public class main {
     public static void main(String[] args) {
         Rock test = new Rock();
 
-        final int length = 100;
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Введите длину маршута: ");
+        int length = in.nextInt();
         test.setLength(length);
 
-        final int max_height = 24;
+        System.out.print("Введите максимальную вершину: ");
+        int max_height = in.nextInt();
         test.setMax_height(max_height);
 
-        test.setDifference3_step(2);
+        System.out.print("Введите максимальный перепад трех ближайших вершин: ");
+        int step = in.nextInt();
+        test.setDifference3_step(step);
 
         test.printRoute();
 
