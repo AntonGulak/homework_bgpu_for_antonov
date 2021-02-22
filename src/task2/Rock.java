@@ -19,7 +19,13 @@ public class Rock {
     }
 
     public void setDifference3_step(int difference3_step) {
-        this.difference3_step = difference3_step;
+        // Если максимальный перепад трех ближайших вершин больше максимальной, то ограничить максимальной вершиной
+        if (difference3_step < max_height) {
+            this.difference3_step = difference3_step;
+        }
+        else {
+            this.difference3_step = max_height;
+        }
     }
 
     public int getLength() {
@@ -45,6 +51,7 @@ public class Rock {
         int difference = 0;
 
         // Генерация первых двух вершин
+        System.out.println(difference3_step);
         route[0] = difference3_step / 2 + (int) (Math.random()*difference3_step / 2);
         route[1] = (int) (Math.random()*difference3_step);
 
