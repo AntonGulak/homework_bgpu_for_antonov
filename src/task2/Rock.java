@@ -79,11 +79,13 @@ public class Rock {
             route[i] = Math.round((float)Math.random() * (b - a) + a);
 
             //Ищем мин. и максимум двух соседних вершин
-            if (route[i-1] < route[i]) {
-                max = route[i];
+            if (route[i-1] > route[i]) {
+                max = route[i-1];
+                min = route[i];
             }
             else {
-                min = route[i];
+                max = route[i];
+                min = route[i-1];
             }
 
             difference = Math.abs(max-min);
