@@ -76,7 +76,7 @@ public class Rock {
             int b = positive(max, difference3_step - difference);
 
 
-            route[i] = (int) (Math.random() * (b + 1 - a) + a);
+            route[i] = Math.round((float)Math.random() * (b - a) + a);
 
             //Ищем мин. и максимум двух соседних вершин
             if (route[i-1] < route[i]) {
